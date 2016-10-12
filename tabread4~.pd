@@ -1,4 +1,4 @@
-#N canvas 1 22 1279 639 10;
+#N canvas 414 22 1280 696 10;
 #X obj 4 -93 tgl 30 0 empty empty empty 17 7 0 10 -4034 -1 -1 1 1;
 #X msg 4 -45 \; pd dsp \$1;
 #X obj 364 411 vsl 50 128 0 1 0 0 empty empty empty 0 -9 0 10 -260097
@@ -7,12 +7,12 @@
 #X obj 207 543 *~;
 #X obj 163 566 dac~ 1 2;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array channelL 2.35944e+07 float 2;
-#X coords 0 1 2.35944e+07 -1 200 140 1;
+#X array channelL 3.25926e+06 float 2;
+#X coords 0 1 3.25926e+06 -1 200 140 1;
 #X restore 410 -109 graph;
 #N canvas 0 22 450 300 (subpatch) 0;
-#X array channelR 2.35944e+07 float 2;
-#X coords 0 1 2.35944e+07 -1 200 140 1;
+#X array channelR 3.25926e+06 float 2;
+#X coords 0 1 3.25926e+06 -1 200 140 1;
 #X restore 408 52 graph;
 #X obj 165 -59 bng 30 250 50 0 empty empty empty 17 7 0 10 -4034 -1
 -1;
@@ -38,10 +38,10 @@
 #X obj 311 370 r sampleSize;
 #X floatatom 283 418 5 0 0 0 - - -;
 #X obj 410 204 hsl 195 15 0 1 0 0 empty empty empty -2 -8 0 10 -258113
--1 -1 2073 1;
+-1 -1 12788 1;
 #X obj 163 311 *~ 0.2;
 #X obj 262 182 hsl 128 15 -1 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 6351 1;
+-1 -1 0 1;
 #X floatatom 259 202 5 0 0 0 - - -;
 #X text 257 141 PLAYBACK SpeeD;
 #X msg 398 224 0;
@@ -61,18 +61,18 @@
 #X text 618 202 TIME;
 #X text 614 237 [TIME locations];
 #X text 175 131 MATCH number TO >>;
+#X msg 259 158 0.000135307;
 #X obj 557 584 writesf~ 2;
 #X msg 700 527 stop;
 #X msg 646 526 start;
-#X msg 537 525 open pipero1.wav;
-#X msg 259 158 0.000186909;
+#X msg 537 525 open PIPA2.wav;
 #X connect 0 0 1 0;
 #X connect 2 0 4 1;
 #X connect 2 0 3 1;
 #X connect 3 0 5 0;
-#X connect 3 0 50 0;
+#X connect 3 0 51 0;
 #X connect 4 0 5 1;
-#X connect 4 0 50 1;
+#X connect 4 0 51 1;
 #X connect 8 0 9 0;
 #X connect 9 0 10 0;
 #X connect 10 0 11 0;
@@ -107,7 +107,7 @@
 #X connect 40 0 16 1;
 #X connect 41 0 16 1;
 #X connect 42 0 16 1;
-#X connect 51 0 50 0;
-#X connect 52 0 50 0;
-#X connect 53 0 50 0;
-#X connect 54 0 30 0;
+#X connect 50 0 30 0;
+#X connect 52 0 51 0;
+#X connect 53 0 51 0;
+#X connect 54 0 51 0;
